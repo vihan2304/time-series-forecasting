@@ -100,3 +100,4 @@ However, performance may vary depending on dataset characteristics, model choice
 - Focused on practical results rather than theoretical assumptions  
 
 ---
+This project highlights how practical results can differ from theoretical expectations, emphasizing the importance of experimentation in time series forecasting.
