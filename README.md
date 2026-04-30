@@ -95,4 +95,4 @@ Recursive predictions showed closer alignment with actual data in this experimen
 
 ### Actual vs Predicted Values (Comparison of Recursive, Direct, and MIMO)
 
-![Forecast Comparison](./forecast_comparison.png)
+![Forecast Comparison](https://raw.githubusercontent.com/vihan2304/time-series-forecasting/main/image.png)
