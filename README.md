@@ -91,4 +91,8 @@ Recursive predictions showed closer alignment with actual data in this experimen
 - Analyzed results critically instead of assuming theoretical outcomes  
 
 ---
+## 📊 Visualization
 
+### Actual vs Predicted Values (Comparison of Recursive, Direct, and MIMO)
+
+![Forecast Comparison](forecast_comparison.png)
