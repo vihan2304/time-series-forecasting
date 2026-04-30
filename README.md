@@ -1,131 +1,45 @@
-# 📊 Time Series Forecasting Model Comparison
+# 📊 Time Series Forecasting using Multi-Step Strategies
 
-## 🚀 Project Overview
-
-This project focuses on comparing different **time series forecasting strategies** to predict **LME Cash Settlement prices** over a 28-day horizon.
-
-The goal is to evaluate model performance using **MAPE (Mean Absolute Percentage Error)** and identify the most accurate approach.
+## 📌 Project Overview
+This project focuses on forecasting future values of time series data using different multi-step forecasting strategies. The goal is to understand how different approaches perform when predicting multiple future steps.
 
 ---
 
-## 🧠 Models Implemented
-
-* 🔁 **Recursive Strategy**
-* 📦 **Direct Strategy**
-* 🔗 **Hybrid Strategy (Regressor Chain)**
-* 🎯 **MIMO Strategy (Multi-Input Multi-Output)**
+## 🚀 Methods Used
+- **Recursive Strategy** – Uses previous predictions as input for future steps  
+- **Direct Strategy** – Builds separate models for each future step  
+- **MIMO (Multi-Input Multi-Output using KNN)** – Predicts multiple steps at once  
 
 ---
 
-## ⚙️ Techniques Used
-
-* Lag-based feature engineering
-* Multivariate time series modeling
-* Hyperparameter tuning (GridSearchCV)
-* TimeSeriesSplit cross-validation
-* Post-processing:
-
-  * Bias correction
-  * Capping (outlier control)
-  * Smoothing
+## 📊 Evaluation Metric
+- **RMSE (Root Mean Square Error)** used to measure prediction accuracy  
 
 ---
 
-## 📂 Project Structure
-
-```
-forecasting-project/
-│
-├── data/
-│   └── Lead_Pricing.csv
-│
-├── notebooks/
-│   └── forecasting.ipynb
-│
-├── src/
-│   ├── recursive.py
-│   ├── direct.py
-│   ├── hybrid.py
-│   ├── mimo.py
-│
-├── results/
-│   └── final_results.txt
-│
-├── README.md
-└── requirements.txt
-```
+## 📈 Results
+- MIMO showed better performance compared to other strategies in multi-step forecasting  
+- Recursive method accumulated errors over time  
+- Direct method improved stability but required multiple models  
 
 ---
 
-## 📈 Final Results
-
-| Model     | MAPE (%) | Accuracy (%) |
-| --------- | -------- | ------------ |
-| Recursive | 2.39     | 97.61        |
-| Hybrid    | 2.95     | 97.05        |
-| Direct    | 3.47     | 96.53        |
-| MIMO      | 8.73     | 91.27        |
-
-🏆 **Best Model: Recursive**
+## 🧠 Key Learnings
+- Multi-step forecasting strategies behave differently depending on approach  
+- MIMO can capture dependencies between future values more effectively  
+- Choosing the right strategy is important for real-world forecasting tasks  
 
 ---
 
-## 🧠 Key Insights
-
-* Recursive models performed best due to strong short-term dependencies
-* Hybrid models provided stable long-term predictions
-* MIMO struggled due to over-generalization
+## 🔗 Future Improvements
+- Add visualization (Actual vs Predicted graphs)  
+- Use advanced models like ARIMA or LSTM  
+- Optimize model performance  
 
 ---
 
 ## 🛠️ Tech Stack
-
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-
----
-
-## ▶️ How to Run
-
-1. Clone the repository:
-
-```
-git clone https://github.com/YOUR-USERNAME/time-series-forecasting.git
-```
-
-2. Install dependencies:
-
-```
-pip install -r requirements.txt
-```
-
-3. Run the notebook or scripts:
-
-```
-python src/recursive.py
-```
-
----
-
-## 📌 Future Improvements
-
-* Deep learning models (LSTM, GRU)
-* Feature expansion (rolling averages, external factors)
-* Automated hyperparameter tuning
-
----
-
-## 👤 Author
-
-**Vihaan Agarwal**
-
-🔗 LinkedIn: www.linkedin.com/in/vihaan-agarwal-2540512aa
-
----
-
-## ⭐ If you like this project
-
-Give it a star ⭐ on GitHub!
+- Python  
+- Basic Machine Learning (KNN)  
+- No external forecasting libraries used  
 
