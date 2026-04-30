@@ -1,14 +1,14 @@
 # 📊 Time Series Forecasting using Multi-Step Strategies
 
 ## 📌 Overview
-This project explores different multi-step forecasting strategies to predict future values of time series data.  
-The goal is to compare how different approaches behave in practice and identify which performs best for the given dataset.
+This project focuses on forecasting future values of time series data using multiple multi-step forecasting strategies.  
+The goal is to compare different approaches and analyze their performance in predicting future time steps.
 
 ---
 
 ## 🎯 Problem Statement
-In real-world applications such as demand forecasting, sales prediction, and financial analysis, predicting multiple future time steps is crucial.  
-This project aims to evaluate different forecasting strategies and analyze their effectiveness.
+In real-world scenarios such as demand forecasting, stock prediction, and business analytics, predicting multiple future values is essential.  
+This project evaluates different forecasting strategies to understand which performs best under given conditions.
 
 ---
 
@@ -20,20 +20,25 @@ This project aims to evaluate different forecasting strategies and analyze their
 - Can accumulate error over longer horizons  
 
 ### 2. Direct Strategy
-- Builds separate models for each future step  
+- Builds separate models for each future time step  
 - Reduces error propagation  
-- Requires more computation  
+- Computationally expensive  
 
 ### 3. MIMO (Multi-Input Multi-Output using KNN)
-- Predicts multiple future values at once  
+- Predicts multiple future values in a single step  
 - Captures dependencies between outputs  
-- Performance depends on data quality and model choice  
+- Performance depends on model and data quality  
+
+### 4. Hybrid Strategy
+- Combines multiple forecasting approaches  
+- Aims to leverage strengths of different models  
+- Helps balance accuracy and stability  
 
 ---
 
 ## 📊 Evaluation Metric
 - **RMSE (Root Mean Square Error)**  
-- Measures the difference between predicted and actual values  
+- Used to measure prediction accuracy  
 - Lower RMSE indicates better performance  
 
 ---
@@ -41,25 +46,28 @@ This project aims to evaluate different forecasting strategies and analyze their
 ## 📈 Results & Insights
 - Recursive strategy achieved the **lowest RMSE** in this experiment  
 - Direct strategy provided stable predictions but with slightly higher error  
-- MIMO approach performed worse, likely due to dataset size and limitations of the KNN model  
+- MIMO approach performed weaker, likely due to dataset size and model limitations  
+- Hybrid strategy showed balanced performance but did not outperform Recursive  
 
 👉 **Conclusion:**  
-For this dataset, the **Recursive strategy performed best** for multi-step forecasting.  
-However, it is important to note that Recursive methods may accumulate error over longer prediction horizons, and results can vary depending on the dataset and model used.
+Recursive strategy performed best for this dataset.  
+However, performance may vary depending on dataset characteristics, model choice, and forecasting horizon.
 
 ---
 
-## 📉 Sample Output
-Predicted values were compared with actual values to evaluate model performance.  
-Recursive predictions showed closer alignment with actual data in this experiment.
+## 📊 Visualization
+
+### Actual vs Predicted Values (Comparison of Recursive, Direct, MIMO, and Hybrid)
+
+![Forecast Comparison](forecast_comparison.png)
 
 ---
 
 ## 🧠 Key Learnings
-- Different multi-step forecasting strategies behave differently in practice  
-- Recursive models can outperform others in certain conditions  
+- Multi-step forecasting strategies behave differently in real-world scenarios  
+- Recursive models can perform well despite theoretical limitations  
 - Model performance depends heavily on data and algorithm choice  
-- Understanding trade-offs is more important than blindly applying methods  
+- Hybrid approaches can improve stability but require proper tuning  
 
 ---
 
@@ -73,28 +81,22 @@ Recursive predictions showed closer alignment with actual data in this experimen
 ## ▶️ How to Run
 1. Clone the repository  
 2. Open the notebook or Python file  
-3. Run all cells to generate predictions and evaluate results  
+3. Run all cells to generate predictions and results  
 
 ---
 
 ## 🔗 Future Improvements
-- Add visualization (Actual vs Predicted graphs)  
-- Experiment with advanced models like ARIMA and LSTM  
-- Perform hyperparameter tuning for improved accuracy  
+- Add advanced models like ARIMA and LSTM  
+- Perform hyperparameter tuning  
+- Improve hybrid model performance  
+- Add more visualizations for deeper analysis  
 
 ---
 
 ## 💡 Project Highlights
 - Implemented multiple forecasting strategies from scratch  
-- Compared models using a real evaluation metric (RMSE)  
-- Focused on understanding core concepts instead of relying on libraries  
-- Analyzed results critically instead of assuming theoretical outcomes  
+- Compared models using RMSE  
+- Built a hybrid approach for improved prediction  
+- Focused on practical results rather than theoretical assumptions  
 
 ---
-## 📊 Visualization
-
-### Actual vs Predicted Values (Comparison of Recursive, Direct, and MIMO)
-
-![Forecast Comparison](https://raw.githubusercontent.com/vihan2304/time-series-forecasting/main/image.png)
-
-This project demonstrates how practical results can differ from theoretical expectations, highlighting the importance of experimentation in data science.
